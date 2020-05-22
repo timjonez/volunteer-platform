@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7" id='project'>
+        <h1>{{post.title}}</h1>
+        <h4>{{post.user}}</h4>
+
+        <p>{{post.body}}</p>
+        <a class="btn btn-secondary" href="{% url 'users:contact' pk=post.user.pk %}">Volunteer!</a>
+        {% if user.is_authenticated%}
+          <a href="{% url 'posts:post_edit' pk=post.pk%}">Edit</a>
+        {% endif%}
+
+      </div>
+      <a id="about_href" class="col-lg-4" href="{% url 'users:church_detail' pk=post.user.pk%}">
+
+        <h2>{{post.user}}</h2>
+        <h6>{{post.user.address}}</h6>
+        {{post.user.description}}
+
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

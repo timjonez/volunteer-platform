@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="church_detail">
+    <h1>{{customuser.church_name}}</h1>
+    <h5>{{customuser.address}}</h5>
+    <p>{{customuser.description}}</p>
+
+    <a class='btn btn-secondary' href="{% url 'users:contact' pk=customuser.pk %}">Contact</a>
+  </div>
+
+{% endblock %}

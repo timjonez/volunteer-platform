@@ -1,0 +1,213 @@
+html, body{
+  background-color:  #bfbfbf;
+  height: 100%;
+  font-family:  'Libre Baskerville', serif;
+}
+
+.index-background{
+  background-image: url(churchpic.jpg);
+  background-position:center;
+  background-size: cover;
+  height: 91.75%;
+}
+
+.navbar, .custnav {
+  background-color: black;
+  color: #d9d9d9;
+}
+
+.custnav-brand{
+  color: white;
+  font-size: 1.75em;
+  margin-right: 25px;
+}
+.custnav-brand:link{color: white; text-decoration: none;}
+.custnav-brand:hover{color: #bfbfbf;}
+
+
+.custnav-item{
+  color: white;
+  font-size: 1.25em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.custnav-item:link{color: white; text-decoration: none;}
+.custnav-item:hover{color: #bfbfbf;}
+
+.index_content{
+  width: 40%;
+  height: 91%;
+  padding: 40px;
+}
+
+.xcontainer{
+  position: absolute;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 10%;
+}
+
+#welcome{
+  text-align:center;
+  background-color: white;
+  margin-top: 50%;
+  border-radius: 5px;
+  padding: 30px;
+  padding-top: 30px;
+  box-shadow: 1px 1px 10px;
+  margin-top: 40px;
+}
+
+#card-title{
+  border-bottom: 1px solid #bfbfbf;
+}
+
+/*############################### Post_List_Page ###################################*/
+
+.search-items{
+}
+
+.post-list-page{
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgba(255, 255, 255, .7);
+  box-shadow: 1px 1px 10px;
+  border-radius: 2px;
+}
+
+#search-cat-title{
+  position: relative;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.cont-search-items{
+  position: relative;
+  height: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+.mybtn{}
+#search-box{}
+#search-dropdown{}
+
+.post{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  border-bottom:.5px solid #bfbfbf;
+}
+
+#post-list-title{
+  color: #737373;
+}
+
+#post-list-title:link{color: #565656; text-decoration: none;}
+#post-list-title:hover{color: #565656;}
+
+/*#################### Post Detail Page ######################*/
+
+#project{
+  background-color: white;
+  margin: 20px;
+  margin-top: 5%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+#about_href:link{color: black;}
+#about_href:hover{
+  text-decoration: none;
+  box-shadow: 1px 1px 20px;
+}
+#about_href:visited{color: black;}
+
+
+#about_href{
+  margin: 20px;
+  margin-top: 5%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+
+/*##################### Login Page ############################*/
+
+.login_page{
+  margin: auto;
+  margin-top: 12%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+/*################ Sign Up Page ################# */
+
+.signup_page{
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+/* ################# Church Detail ################ */
+
+.church_detail{
+  background-color: white;
+  margin-left: 15%;
+  margin-top: 4%;
+  padding: 30px;
+  width: 70%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+/*################# Contact Form ################### */
+
+#contact_form{
+  background-color: white;
+  margin: 20px;
+  margin-top: 5%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+#contact_info{
+  background-color: white;
+  height: 25%;
+  margin: 20px;
+  margin-top: 5%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}
+
+#contact_info:link{color: black;}
+#contact_info:hover{
+  text-decoration: none;
+  box-shadow: 1px 1px 20px;
+}
+#contact_info:visited{color: black;}
+
+
+/* ################# New Project Page #################### */
+
+#form{
+  margin: auto;
+  margin-top: 5%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px;
+}

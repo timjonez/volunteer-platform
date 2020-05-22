@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+
+  <form class="searchfield" action="{% url 'posts:post_search'%}" method="get">
+    <button  type="submit" name="button">
+      <i class="fa fa-search"></i>
+    </button>
+    <input class="searchfield" id="searchbox" name='q' type="text" placeholder="Search">
+
+  </form>
+
+
+  <form method="get">
+    {{filter.form.as_p}}
+    <input type="submit">
+  </form>
+
+
+  {% for post in filter.qs %}
+    <a href="{% url 'posts:post_detail' pk=post.pk%}">{{ post.title }}</a>
+
+
+    {{post.created_date}}
+
+    {{post.body}}
+    {{view.categories.id}}
+    <br>
+  {% endfor%}
+
+  {% for category in view.categories %}
+   {{category.id}}
+   {{category_pk}}
+  {% endfor %}
+
+{% endblock %}

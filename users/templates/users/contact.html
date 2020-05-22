@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" id='contact_form' >
+        <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <button class="btn btn-secondary" type="submit">Contact</button>
+        </form>
+      </div>
+
+      <a id="contact_info" class="col-lg-4" href="{% url 'users:church_detail' pk=church.pk%}">
+        <h1>{{church.church_name}}</h1>
+        <p>{{church.address.street_number}} {{church.address.route}}<br>
+           {{church.address.locality.name}}, {{church.address.locality.state.name}}, {{church.address.locality.postal_code}}<br>
+           {{church.email}}<br>
+           {{church.phone_number}}
+        </p>
+      </a>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

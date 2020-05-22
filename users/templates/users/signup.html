@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap4 %}
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>ChurchWorks</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/master.css'%}">
+		{{ form.media }}
+	</head>
+	<body>
+
+		<nav class=" navbar navbar-expand-lg navbar-light">
+
+				<div class="navbar-nav align-items-center">
+
+					<a class="custnav-brand" href="{% url 'home'%}"> <b>ChurchWorks</b>
+					</a>
+				</div>
+				<div class="navbar-nav ml-auto">
+						<a class="custnav-item" href="{% url 'posts:post_list'%}">Jobs</a>
+					{% if user.is_authenticated %}
+						<a class="custnav-item" href="{% url 'users:logout'%}">Logout</a>
+					{% else %}
+						<a class="custnav-item" href="{% url 'users:login'%}">Log In</a>
+					{% endif %}
+				</div>
+
+
+		</nav>
+
+	<div class="container">
+		<div class="col-md-4 signup_page">
+
+			 <h1>Sign Up</h1>
+			 <form method="post">
+					{% csrf_token %}
+					{%bootstrap_form form%}
+				 <button type="submit" class="btn btn-primary">Sign Up</button>
+			 </form>
+			 Already have an account? <a href="{% url 'users:login' %}">Log In</a>
+		</div>
+	</div>
+
+	</body>
+</html>

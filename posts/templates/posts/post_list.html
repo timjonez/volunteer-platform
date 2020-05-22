@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class=" container search-items">
+    <div class="cont-search-items">
+    <form method="get">
+        <input class="btn btn-secondary mybtn" type="submit" value='Search'>
+        <my id="search-box" >{{filter.form.search}}</my>
+        <my id="search-cat-title"><b>Category:</b></my>
+        <my id="search-dropdown">{{filter.form.label}}</my>
+    </form>
+  </div>
+</div>
+  <div class="post-list-page">
+
+    <br>
+    {% for post in filter.qs %}
+      <div class="post">
+        <h3><a id="post-list-title" href="{% url 'posts:post_detail' pk=post.pk%}">{{ post.title }}</a></h3>
+        <h5>{{post.created_date|date:'m/d/yy'}}&nbsp;&nbsp;{{post.user}}</h5>
+        <p>{{post.body|truncatechars:200}}</p>
+      </div>
+    {% endfor%}
+
+
+  </div>
+
+
+
+
+
+{% endblock %}
